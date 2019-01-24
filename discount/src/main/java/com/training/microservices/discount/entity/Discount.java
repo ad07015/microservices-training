@@ -11,7 +11,7 @@ public class Discount {
     @GeneratedValue
     private Long id;
     private String description;
-    private int discount;
+    private Long discount;
     private Long points;
 
     public Discount() {
@@ -25,7 +25,7 @@ public class Discount {
         return description;
     }
 
-    public int getDiscount() {
+    public Long getDiscount() {
         return discount;
     }
 
