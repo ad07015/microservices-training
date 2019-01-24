@@ -10,9 +10,9 @@ public class Discount {
     @Id
     @GeneratedValue
     private Long id;
-    private String description;
     private Long discount;
     private Long points;
+    private String play;
 
     public Discount() {
     }
@@ -21,15 +21,15 @@ public class Discount {
         return id;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
     public Long getDiscount() {
         return discount;
     }
 
     public Long getPoints() {
         return points;
+    }
+
+    public String getPlay() {
+        return play;
     }
 }
