@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "56ab36d4-0f28-43da-b679-dd8e1ad2738f",
+		"name": "Trainings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "microservices",
+			"item": [
+				{
+					"name": "Points",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/points?uuid=SamUUID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"points"
+							],
+							"query": [
+								{
+									"key": "uuid",
+									"value": "SamUUID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Discounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8090/discounts/?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"discounts",
+								""
+							],
+							"query": [
+								{
+									"key": "under",
+									"value": "800",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Offers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8100/offers?uuid=AlexUUID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"offers"
+							],
+							"query": [
+								{
+									"key": "uuid",
+									"value": "AlexUUID"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
