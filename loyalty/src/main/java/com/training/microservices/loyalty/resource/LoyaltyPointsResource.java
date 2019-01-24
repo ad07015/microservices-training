@@ -1,5 +1,6 @@
 package com.training.microservices.loyalty.resource;
 
+import com.training.microservices.loyalty.entity.LoyaltyPoints;
 import com.training.microservices.loyalty.exception.NoUserWithUUIDException;
 import com.training.microservices.loyalty.repo.LoyaltyPointsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +17,11 @@ public class LoyaltyPointsResource {
     private LoyaltyPointsRepository loyaltyPointsRepository;
 
     @GetMapping("/points")
-    public Long getPointsByUserUUID(@RequestParam("uuid") String uuid) throws NoUserWithUUIDException {
-        Optional<Long> points = loyaltyPointsRepository.findPointsByUserUUID(uuid);
-
+    public LoyaltyPoints getPointsByUserUUID(@RequestParam("uuid") String uuid) throws NoUserWithUUIDException {
+        Optional<LoyaltyPoints> points = loyaltyPointsRepository.findPointsByUserUUID(uuid);
         if (!points.isPresent()) {
             throw new NoUserWithUUIDException("No user found with UUID: " + uuid);
         }
-
         return points.get();
     }
 }

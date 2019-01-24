@@ -10,6 +10,10 @@ public class DiscountList implements Serializable {
     public DiscountList() {
     }
 
+    public DiscountList(List<Discount> discountList) {
+        this.discountList = discountList;
+    }
+
     public List<Discount> getDiscountList() {
         return discountList;
     }

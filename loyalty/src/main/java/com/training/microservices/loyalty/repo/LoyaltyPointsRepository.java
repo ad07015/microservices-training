@@ -10,6 +10,6 @@ import java.util.Optional;
 @Repository
 public interface LoyaltyPointsRepository extends JpaRepository<LoyaltyPoints, Long> {
 
-    @Query("select points from LoyaltyPoints where uuid = ?1")
-    Optional<Long> findPointsByUserUUID(String uuid);
+    @Query("select lp from LoyaltyPoints lp where uuid = ?1")
+    Optional<LoyaltyPoints> findPointsByUserUUID(String uuid);
 }
